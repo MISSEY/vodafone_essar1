@@ -1,0 +1,67 @@
+﻿@using Vodafone_Essar1.ViewModels
+@model EmployeeListViewModel
+
+@{
+    //Layout = null;
+}
+
+
+@{
+    List<String> s = new List<String>();
+    var i = 0;
+    List<decimal> total = new List<decimal>(); 
+    
+    string[] m = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec"};
+
+    foreach (UsersBills_View item in Model.Employees_Bills)
+    {
+        s.Add(m[Int32.Parse(item.Months)]);
+        total.Add(item.Total);
+
+    }
+    String[] s2 = s.ToArray();
+           
+            
+   }
+
+
+	@{
+	       	
+ 
+      
+        var myChart = new Chart(width: 700, height: 400, theme: ChartTheme.Blue)
+        .AddTitle("Data Usage Month Wise")
+        .AddSeries(
+            name: "Employee",
+            xValue: s,
+            yValues: total);
+      
+       				
+        
+     
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        document.getElementById("mychart").on('click', function () {
+            alert("asdasd");
+        });
+    });
+</script>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Charts</title>
+    </head>
+    <body>
+        
+        <div>
+            <center>
+             @myChart.Write();
+                </center>
+        </div>
+        <div>
+
+            
+        </div>
+    </body>
+    </html>

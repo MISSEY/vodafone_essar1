@@ -1,0 +1,919 @@
+﻿ @using Vodafone_Essar1.ViewModels
+@model EmployeeViewModel
+@{
+    ViewBag.Title = "Index2";
+}
+
+<script src="~/Content/js/moment.min.js"></script>
+<script src="~/Content/js/moment-with-locales.min.js"></script>
+
+<script src="~/Content/js/Chart.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/dataTables.buttons.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/buttons.flash.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/jszip.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/buttons.html5.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/buttons.print.min.js"></script>
+<script type="text/javascript">
+
+    function BindTable() {
+        $.ajax({
+            
+            type: "POST",
+            dataType: "json",
+            
+            url: "Employee/GetEmployee",
+            data: {
+                from: document.getElementById('from').value,
+                to: document.getElementById('to').value,
+                status:document.getElementById('Act_Deact').value
+
+            },
+
+            success: function (data1) {
+                   Bind(data1);              
+                document.getElementById("divLoading").style.display = "none";
+            }             
+        });
+    }
+   
+    function Bind(data1) {
+        $('#Employeetable').dataTable().fnDestroy();
+        var datatableVariable = $('#Employeetable').DataTable({
+            data: data1,
+
+            "sScrollX": true,
+            "sScrollY": 400,
+            "bScrollCollapse": true,
+            dom: 'Bfrtip',
+            buttons: [
+               'excel', 'print'
+            ],
+            columns: [
+                {
+                    data: null,
+                    render: function (data, type, row) {
+                        var d = new Date();
+                        var month = d.getMonth() - 2;
+                       
+                        if (row.status == 1) {
+
+                            if (month == -2 & row.Year >= d.getYear() - 1 & (row.month == 11 || row.month == 0 || row.month==10)) {
+
+                                className: "center"
+                                return '<center><div><a id="Change_reqbutton" class="edit "><img src="Content/images/s.gif" width="15px" height="15px" /></a></div></center>';
+                            }
+                            else if (month == -1 & row.Year >= d.getYear() - 1 & (row.month == 11 || row.month == 0 )) {
+
+                                className: "center"
+                                return '<center><div><a id="Change_reqbutton" class="edit "><img src="Content/images/s.gif" width="15px" height="15px" /></a></div></center>';
+                            }
+                            else if (row.Months >= month & row.Year == d.getFullYear()) {
+                                    className: "center"
+                                return '<center><div><a id="Change_reqbutton" class="edit "><img src="Content/images/s.gif" width="15px" height="15px" /></a></div></center>';
+                            }
+                            else {
+                                return //'<a id="graph_req" class="show_graph" style="display:inline-block;"><img src="/Content/images/graph.gif" width="15px" height="15px" /> </a></div>';
+                            }
+                        }
+                        else {
+                            return '<a id="reactivate_users" class="reactivate_users" style="display:inline-block;"><img src="Content/images/reactivation_icon.png" width="15px" height="15px" /> </a></div>';
+
+                        }
+                    }
+
+                },
+
+                {'data':'Employees_Name'},
+                {'data':'SAP_ID'},
+                {'data':'Levels'},
+                {'data':'Mobile_no'},
+                {
+                    'data': 'Sim_no',
+                    "targets": [5],
+                    "visible": false,
+                },
+                {
+                    'data': 'email_id',
+                    "targets": [6],
+                    "visible": false,
+                },
+                {'data':'Limit'},
+                {
+                    'data': 'Months',
+                    render: function (data, type, row) {
+            var m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return m[data];
+        }
+    },
+                {'data': 'Year'},
+                {'data': 'Sub_total'},
+                {'data': 'GST_18'},
+                {'data': 'Total'},
+
+                {
+                    'data': 'Deduction'
+                }]
+        });
+    }
+
+
+
+
+    $(document).ready(function () {
+    
+  
+        
+        var Month,sim_no;
+        document.getElementById('from').value = moment().format('DD/MM/YYYY');
+        document.getElementById('to').value = moment().format('DD/MM/YYYY');
+        document.getElementById('Act_Deact').value = 1;
+        document.getElementById("uploading").style.display = "none";
+        document.getElementById("Change_type").value = 1;
+        var mobile_no;
+
+        BindTable();
+
+        var dateFormat = "dd/mm/yy",
+              from = $("#from")
+                .datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: "dd/mm/yy",
+                    numberOfMonths: 1
+                })
+                .on("change", function () {
+                    to.datepicker("option", "minDate", getDate(this));
+                }),
+              to = $("#to").datepicker({
+                  defaultDate: "+1w",
+                  changeMonth: true,
+                  dateFormat: "dd/mm/yy",
+                  changeYear: true,
+                  numberOfMonths: 1
+              })
+              .on("change", function () {
+                  from.datepicker("option", "maxDate", getDate(this));
+              });
+
+            function getDate(element) {
+                var date;
+                try {
+                    date = $.datepicker.parseDate(dateFormat, element.value);
+                } catch (error) {
+                    date = null;
+                }
+
+                return date;
+            }
+        
+          
+
+
+            $("#dialog").dialog({
+                autoOpen: false,
+                resizable: false,
+                show: 'blind',
+                hide: 'blind',
+                width: 700,
+                title:"Change Request Form",
+                height: 600,
+                close: function (event, ui) {
+                    var s = document.getElementById('Mobile_No');
+                    var s1 = document.getElementById('SIM_No');
+                    for (i = 0; i < s.length; i++) {
+                        if (s.options[i].value == mobile_no) {
+                            s.remove(i);
+                            break;
+                        }
+                    }
+                   
+                    for (i = 0; i < s1.length; i++) {
+                        if (s1.options[i].value == sim_no) {
+                            s1.remove(i);
+                            break;
+                        }
+                    }
+                }
+           
+        });
+
+
+
+            $('#AddDialog').on('dialogclose', function (event) {
+                window.location.href = '@Url.Action("Index2", "Employee")';
+        });
+
+      
+
+        var id2;
+        var m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        function edit(data) {
+            document.getElementById('Employees_Name').value = data['Employees_Name'];
+            document.getElementById('SAP_ID').value = data['SAP_ID'];
+            document.getElementById('level').value = data['Levels'];
+            document.getElementById('Mobile_No').value = data['Mobile_no'];
+            document.getElementById('Sub_Total').value = data['Sub_total'];
+            document.getElementById('Sr_no').value = data['Sr_no'];
+            document.getElementById('Year').value=data['Year'];
+            document.getElementById('SIM_No').value = data['Sim_no'];
+            document.getElementById('Email_Id').value = data['email_id'];
+            document.getElementById('Billed_To').value = data['Billed_To'];
+            document.getElementById('Department').value = data['Department'];            
+            document.getElementById('Months').value = m[parseInt(data['Months'])];
+
+
+        }
+
+
+        function deactivate(data) {
+            document.getElementById('Employees_Name1').value = data['Employees_Name'];
+            document.getElementById('SAP_ID1').value = data['SAP_ID'];
+            document.getElementById('level1').value = data['Levels'];
+            document.getElementById('Mobile_No1').value = data['Mobile_no'];
+            document.getElementById('Sr_no1').value = data['Sr_no'];
+            document.getElementById('SIM_No1').value = data['Sim_no'];
+            document.getElementById('Email_Id1').value = data['email_id'];
+            document.getElementById('Billed_To1').value = data['Billed_To'];
+            document.getElementById('Department1').value = data['Department'];
+        }
+       
+            $('#Employeetable').on('click', 'a.edit', function (e) {
+                e.preventDefault;
+                //edit();
+
+                var table = $('#Employeetable').DataTable();
+                var id = $(this).parents('tr')[0];
+                var id1 = table.row(id).index();
+                var data = table.row(id).data();
+                id2 = id1;
+                mobile_no = data['Mobile_no'];
+                sim_no = data['Sim_no'];
+                document.getElementById('Mobile_No').options.add(new Option(mobile_no));
+                document.getElementById('SIM_No').options.add(new Option(sim_no));
+                //alert(id1);
+                edit(data);
+
+                document.getElementById("act").checked = true;
+                $("#act").trigger('change');
+
+                document.getElementById("ChangeRequest").style.display = "block";
+                $('input[name="demo"]').change(function () {
+
+                    if ($('#act').prop('checked')) {
+                        document.getElementById("change_req").style.display = "block";
+                        document.getElementById("deactivate").style.display = "none";
+                        
+                    } else {
+                        document.getElementById("change_req").style.display = "none";
+                        document.getElementById("deactivate").style.display = "block";
+                        deactivate(data);
+                    }
+                });
+
+                document.getElementById("Change_type").addEventListener("change", function () {
+                    edit(data);
+                });
+                
+                $("#dialog").dialog('open');
+            });
+
+                    
+           
+
+
+
+            $('#change_req', dialog).submit(function () {
+                document.getElementById("divLoading").style.display = "block";
+                  $.ajax({
+                url: '@Url.Action("Edit", "Employee")',
+                type: this.method,
+                data: {
+                    Sr_no :document.getElementById('Sr_no').value,
+                    Employees_Name: document.getElementById('Employees_Name').value,
+                    SAP_ID: document.getElementById('SAP_ID').value,
+                    Levels:document.getElementById('level').value ,
+                    Mobile_No: document.getElementById('Mobile_No').value,
+                    Limit: document.getElementById('Limit').value,
+                    Sim_no: document.getElementById('SIM_No').value,
+                    email_id: document.getElementById('Email_Id').value,   
+                    Billed_To: document.getElementById('Billed_To').value,
+                    Department: document.getElementById('Department').value,
+                    Change_type: parseInt(document.getElementById('Change_type').value),
+                    Reason_Sim_replacement: document.getElementById('Reason_Sim_replacement').value,
+                    Scheme: document.getElementById('Scheme').value,
+                    status:1
+
+                },
+                success: function (result) {
+                    if (result.success) {
+                        $('#dialog').dialog('close');
+                       
+                        alert("Change Successfully");
+                        BindTable();
+                       
+
+                    }
+                    else {
+                        document.getElementById("divLoading").style.display = "none";
+                        alert(result);
+                        $('#dialog').dialog('close');
+                       
+
+                    }
+                }
+            });
+            return false;
+        });
+
+  
+    $("#AddDialog").dialog({
+
+    modal: true,
+    autoOpen: false,
+    resizable: false,
+    show: 'blind',
+    hide: 'blind',
+    width: 700,
+    title:"New Request Form",
+    height: 600,
+
+    });
+
+
+
+    $('#Add').on('click', function (e) {
+        e.preventDefault;
+        $('#AddDialog').load("@Url.Action("Add", "Employee")", function () {
+             $(this).dialog({
+             });
+       
+           });
+           $("#AddDialog").dialog('open');
+
+    });
+
+
+
+
+
+        $('#No').click(function () {
+            $('#dialog').dialog('close');
+        });
+
+
+        $('#Employeetable').on('click', 'a.show_graph', function (e) {
+            e.preventDefault;
+
+            var table = $('#Employeetable').DataTable();
+            var id = $(this).parents('tr')[0];
+            var id1 = table.row(id).index();
+            var data = table.row(id).data();
+ 
+
+            window.open('@Url.Action("Show_Graph", "Employee")?Sr_no=' +data['Sr_no']);
+    });
+      
+        $('#deactivate').submit(function () {
+            debugger;
+            document.getElementById("divLoading").style.display = "block";
+            $.ajax({
+                url: '@Url.Action("Deactivate", "Employee")',
+                type: this.method,
+                data: {
+                    Sr_no: document.getElementById('Sr_no1').value,
+                    Employees_Name: document.getElementById('Employees_Name1').value,
+                    SAP_ID: document.getElementById('SAP_ID1').value,
+                    Levels: document.getElementById('level1').value,
+                    Mobile_No: document.getElementById('Mobile_No1').value,
+                   // Limit: document.getElementById('Limit1').value,
+                    //Sim_no: document.getElementById('SIM_No1').value,
+                    email_id: document.getElementById('Email_Id1').value,
+                    Billed_To: document.getElementById('Billed_To1').value,
+                    Department: document.getElementById('Department1').value,
+                },
+                success: function (result) {
+                    debugger;
+                    if (result.success) {
+                        $('#dialog').dialog('close');
+                        alert("Deactivated");
+                        BindTable();
+                       
+
+
+                    }
+                    else {
+                        alert(result);
+                        document.getElementById("divLoading").style.display = "none";
+                        $('#dialog').dialog('close');
+
+
+                    }
+                }
+            });
+            return false;
+
+        });
+
+        $("#MonthYear").click(function () {
+           document.getElementById("divLoading").style.display = "block";
+
+            BindTable();
+           
+        });
+        $("#button_choose").click(function () {
+            document.getElementById("uploading").style.display = "block";
+
+        });
+
+
+
+
+        $("#Reactivation").dialog({
+            autoOpen: false,
+            resizable: false,
+            show: 'blind',
+            hide: 'blind',
+            width: 600,
+            title: "Reactivate User",
+            height: 350,
+        });
+        function Reactivate(data) {
+            
+            document.getElementById('SAP_ID_R').value = data['SAP_ID']; 
+            document.getElementById('Mobile_No_R').value = data['Mobile_no'];
+            document.getElementById('Year_R').value = data['Year'];
+            document.getElementById('Month_R').value = data['Months'];
+            document.getElementById('Employees_Name_R').value = data['Employees_Name'];
+            document.getElementById('level_R').value = data['Levels'];
+            document.getElementById('Billed_To_R').value = data['Billed_To'];
+            document.getElementById('Department_R').value = data['Department'];
+        }
+        $('#Employeetable').on('click', 'a.reactivate_users', function (e) {
+            e.preventDefault;
+        
+
+            var table = $('#Employeetable').DataTable();
+            var id = $(this).parents('tr')[0];
+            var id1 = table.row(id).index();
+            var data = table.row(id).data();
+            id2 = id1;
+            //alert(id1);
+            Reactivate(data);
+            document.getElementById("Reactivate_R").style.display = "block";
+            $("#Reactivation").dialog('open');
+        });
+
+        $('#No_R').click(function () {
+            $('#dialog').dialog('close');
+        });
+
+        $('#Reactivate_R').submit(function () {
+            document.getElementById("divLoading").style.display = "block";
+            $.ajax({
+                url: '@Url.Action("Reactivate", "Employee")',
+                type: this.method,
+                data: {               
+                    SAP_ID: document.getElementById('SAP_ID_R').value,             
+                    Mobile_No: document.getElementById('Mobile_No_R').value,
+                    Months: document.getElementById('Month_R').value,
+                    Year: document.getElementById('Year_R').value,
+                    Employees_Name:document.getElementById('Employees_Name_R').value,
+                    Levels:document.getElementById('level_R').value, 
+                    Sim_no:document.getElementById('SIM_No_R').value,
+                    Billed_To: document.getElementById('Billed_To_R').value,
+                    Department: document.getElementById('Department_R').value,
+                    Limit: document.getElementById('Limit_R').value,
+                    Sim_no: document.getElementById('SIM_No_R').value,
+                    Scheme: document.getElementById('Scheme_R').value,
+                    status:1
+                },
+                success: function (result) {
+                    if (result.success) {
+                        $('#Reactivation').dialog('close');
+                        alert("Reactivated");
+                        BindTable();
+                        document.getElementById("divLoading").style.display = "none";
+
+                    }
+                    else {
+                        alert(result);
+                        document.getElementById("divLoading").style.display = "none";
+                        $('#Reactivation').dialog('close');
+
+                    }
+                }
+            });
+            return false;
+
+        });
+
+        //For Reactivation Scheme
+        document.getElementById("Scheme_R").onchange = function () {
+          
+            $.ajax({
+                url: "Employee/Scheme",
+                type: "POST",
+                dataType: "json",
+                data: { Prefix: document.getElementById('Scheme_R').value },
+                success: function (data) {
+                    document.getElementById('Limit_R').value = data;
+                }
+            })
+
+        }
+        document.getElementById("Scheme_R").onchange();
+       
+        
+        
+    });
+
+    
+
+
+
+</script>
+
+
+<!--<form method="post" enctype="multipart/form-data">
+                 <input style="float:left;" name="file" type="file" />
+                <button id="uploadExcel"style="float:right;" class="showHide btn btn-primary" type="submit">Upload</button>
+
+        </form>-->
+ <div id="form1" runat="server">  
+          
+        <div style="padding: 10px; border: 1px solid black; margin-top: 25px ;background-color:#fff" class="container-fluid">  
+           
+               <div>
+               <input type="button" class="showHide btn btn-primary" value="Add New" id="Add" style="padding:0.5% 1.5% 0.5% 1.5%;display:inline"/>
+                
+
+                   <form id="MonYear_submit" method="post" style="display:inline">
+
+                     <span style="padding-left:20%;" >
+                     <label class="showHide btn btn-primary " for="from" style="padding:0.5% 1.5%;">From</label>
+                     <input class="textarea1" type="text" id="from" name="from" placeholder="mm/dd/yyyy" >
+                     <label class="showHide btn btn-primary" for="to" style="padding:0.5% 1.5%;">to</label>
+                      <input class="textarea1" type="text" id="to" name="to" placeholder="mm/dd/yyyy">
+ 
+                                        <select class="textarea1"name="Act_Deact" id="Act_Deact">
+										<option value="1">Activation</option>
+										<option value="0">Deactivation</option>
+
+									</select>
+                             
+                 <input type="Button" class="showHide btn btn-primary" name="DateSubmit" id="MonthYear" value="Search" style="padding:0.5% 1.5% 0.5% 1.5%;">
+                         </span>
+                     </form> 
+                   </div>
+                
+          
+            <br />  
+            <table id="Employeetable" class="table table-responsive table-hover cell-border" width="100%">  
+                <thead>  
+
+                    <tr>
+                          
+                       <th style="width:30px"></th>
+                        <th>Employee Name</th>  
+                        <th>SAP ID</th>  
+                        <th>Levels</th>  
+                        <th>Mobile Number</th> 
+                        <th>Sim Number</th>  
+                        <th>Email Id</th>  
+                        <th>Limit</th>
+                        <th>Month</th> 
+                        <th>Year</th>  
+                        <th>Sub Total</th> 
+                        <th>18% GST</th> 
+                        <th>Total</th>
+                        <th>Deduction</th>
+
+
+                    </tr>  
+                </thead>  
+               
+            </table>  
+        </div>  
+    </div> 
+<div id="AddDialog" >
+
+    </div>
+<div id="Reactivation" >
+     @using (Html.BeginForm("Reactivate", "Employee", FormMethod.Post, new { id = "Reactivate_R", @class = "form-horizontal", style = "display:none;" }))
+     {
+          @Html.TextBoxFor(a => a.Mobile_no, "Mobile_no", new { @class = "form-control1", @readonly = "readonly", hidden="",style = "background-color:#E4E4E4;", id = "Mobile_No_R" })
+            <input readonly = "readonly" hidden="" style="background-color:#E4E4E4;" name="SAP_ID" type="text" class="form-control1" id="SAP_ID_R" placeholder="Enter SAP ID">
+            <input readonly = "readonly" hidden="" style="background-color:#E4E4E4;" name="Months" type="text" class="form-control1" id="Month_R" >
+            <input readonly = "readonly" hidden="" style="background-color:#E4E4E4;" name="Year" type="text" class="form-control1" id="Year_R" >
+         @Html.TextBoxFor(a => a.Billed_To, "Billed_To", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Billed_To_R" })
+         @Html.TextBoxFor(a => a.Department, "Department", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Department_R" })
+         @Html.TextBoxFor(a => a.Employees_Name, "Employees_Name", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;",hidden = "", id = "Employees_Name_R" })
+         @Html.TextBoxFor(a => a.Sim_no, "SIM_No", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;",hidden = "", id = "SIM_No_R" })
+         @Html.TextBoxFor(a => a.Levels, "Levels", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "level_R" })
+         @Html.TextBoxFor(a => a.Limit, "Limit", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Limit_R" })
+          <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">SIM No <font color="red"> *</font></label>
+									<div class="col-sm-8">
+                                        @Html.DropDownListFor(a => a.Sim_number_list, new SelectList(new Vodafone_Essar1.Controllers.EmployeeController().GetSimNumber(), "Sim_no", "Sim_no"), new { id = "SIM_No_R", @class = "form-control1", required = "" })
+                                        </div>
+                                        </div>
+         
+          <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Scheme <font color="red"> *</font></label>
+									<div class="col-sm-8"> 
+                                        @Html.DropDownListFor(a => a.Plans_List_View, new SelectList(new Vodafone_Essar1.Controllers.EmployeeController().GetScheme(), "Plan", "Plan"), new { id = "Scheme_R", @class = "form-control1"})</div>
+                                    </div>
+
+         <center>
+                              <h4>Are you sure want to Reactivate ?</h4><br />
+					                <input id="Yes_R" class="showHide btn btn-primary" type="Submit" value="Yes" />
+                                   
+                                  
+                                    <input id="No_R" class="showHide btn btn-primary" type="button" value="No" />
+        </center>
+     }
+    </div>
+
+<div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px;
+    top: 0px; width: 100%; height: 100%; background-color: #666666; z-index: 30001;
+    opacity: .8; filter: alpha(opacity=70);display:block" >
+    <p style="position: absolute; top: 30%; left: 45%; color: White;">
+        Loading, please wait...<img src="~/Content/images/ajax-loader.gif" />
+    </p>
+</div>
+<div id="uploading" style="margin: 0px; padding: 0px; position: fixed; right: 0px;
+    top: 0px; width: 100%; height: 100%; background-color: #666666; z-index: 30001;
+    opacity: .8; filter: alpha(opacity=70);display:none" >
+    <p style="position: absolute; top: 30%; left: 45%; color: White;">
+        UPLOADING<img src="~/Content/images/ajax-loader.gif" />
+    </p>
+</div>
+
+
+<div id="dialog">
+
+    <form class="form-horizontal" id="radio">
+                                <div class="form-group">
+									<label for="radio" class="col-sm-2 control-label"></label>
+									<div class="col-sm-8">
+										<div class="radio-inline"><label><input name="demo" type="radio" checked="" id="act"> Change Request</label></div>
+										<div class="radio-inline"><label><input name="demo" type="radio"  id="deact"> Deactivation</label></div>
+										</div>
+								</div>
+                            </form>
+
+     <div class="grid-form1" id="ChangeRequest" style="display:none;">
+          <div class="tab-content">
+  	        <div class="tab-pane active" id="horizontal-form1">
+                            @using (Html.BeginForm("Deactivate", "Employee", FormMethod.Post, new { id = "deactivate", @class = "form-horizontal", style = "display:none;" }))
+                            {
+                           <h4>Are you sure want to Deactivate ?</h4><br />
+                                 @Html.TextBoxFor(a => a.Sr_no, "Sr_no", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Sr_no1" })
+                                   @Html.TextBoxFor(a => a.Billed_To, "Billed_To", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Billed_To1" })
+                                   @Html.TextBoxFor(a => a.Department, "Department", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Department1" })
+
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Employee Name</label>
+									<div class="col-sm-8">
+										
+                                     @Html.TextBoxFor(a => a.Employees_Name, "Employees_Name", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", id = "Employees_Name1" })
+                                  
+									</div>
+								</div>
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">SAP ID</label>
+									<div class="col-sm-8">
+										<input readonly = "readonly" style="background-color:#E4E4E4;" name="SAP_ID" type="text" class="form-control1" id="SAP_ID1" placeholder="Enter SAP ID">
+									</div>
+									
+								</div>
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Contact No</label>
+									<div class="col-sm-8">
+										
+                                     @Html.TextBoxFor(a => a.Mobile_no, "Mobile_no", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", id = "Mobile_No1" })
+                                  
+									</div>
+								</div>
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">SIM No</label>
+									<div class="col-sm-8">
+										
+                                     @Html.TextBoxFor(a => a.Sim_no, "SIM_No", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", id = "SIM_No1" })
+                                  
+									</div>
+								</div>
+                              
+										<input readonly = "readonly" hidden = "" style="background-color:#E4E4E4;" name="Email_Id" type="email" class="form-control1" id="Email_Id1" >
+								
+                             
+										
+                                     @Html.TextBoxFor(a => a.Levels, "Levels", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "level1" })
+
+								<center>
+                              
+					                <input id="Yes" class="showHide btn btn-primary" type="Submit" value="Yes" />
+                                   
+                                  
+                                    <input id="No" class="showHide btn btn-primary" type="button" value="No" />
+                                    </center>
+                                
+                            }
+                             
+
+                            </div>
+              </div>
+
+  	         <div class="tab-content">
+						<div class="tab-pane active" id="horizontal-form">
+                            @using (Html.BeginForm("Edit", "Employee", FormMethod.Post, new { id = "change_req", @class = "form-horizontal", style = "display:block;" }))
+                            {
+							 @Html.TextBoxFor(a => a.Sr_no, "Sr_no", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Sr_no" })
+                                 @Html.TextBoxFor(a => a.Billed_To, "Billed_To", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Billed_To" })
+                                   @Html.TextBoxFor(a => a.Department, "Department", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", hidden = "", id = "Department" })
+                                 <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Change Type <font color="red"> *</font></label>
+									<div class="col-sm-8">
+                                      
+                                        <select name="Change_type" id="Change_type" class="form-control1" required="">
+										<option value="1">Change Scheme</option>
+										<option value="2">Change SIM Number </option>
+										<option value="3">Change Mobile Number</option>
+										                            
+									</select></div>
+                                </div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Employee Name</label>
+									<div class="col-sm-8">
+										
+                                     @Html.TextBoxFor(a => a.Employees_Name, "Employees_Name", new { @class = "form-control1", @readonly = "readonly", style = "background-color:#E4E4E4;", placeholder = "Enter Your Name" })
+                                  
+									</div>
+								</div>
+
+                                 <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">SAP ID</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="SAP_ID" type="text" class="form-control1" id="SAP_ID" placeholder="Enter SAP ID">
+									</div>
+									
+								</div>
+
+                     
+                                 <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Contact No <font color="red"> *</font></label>
+									<div class="col-sm-8">
+                                        
+                                      @Html.DropDownListFor(model => model.MobilenumberList, new SelectList(new Vodafone_Essar1.Controllers.EmployeeController().GetMobile(), "Mobile_no", "Mobile_no"), new { id = "Mobile_No", @class = "form-control1", disabled = "", style = "background-color:#E4E4E4;", required = "" })
+  
+                                        
+                                </div>
+                                    </div>
+
+                         
+
+                                    <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">SIM No <font color="red"> *</font></label>
+									<div class="col-sm-8">
+                                        @Html.DropDownListFor(model => model.Sim_number_list, new SelectList(new Vodafone_Essar1.Controllers.EmployeeController().GetSimNumber(), "Sim_no", "Sim_no"), new { id = "SIM_No", @class = "form-control1", disabled = "", style = "background-color:#E4E4E4;", required = "" })
+                                        </div>
+                                        </div>
+
+                                <div id="ReasonForsimReplacement" hidden="" class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Reason<font color="red"> *</font></label>
+									<div class="col-sm-8">
+                                        
+                                    <select  name="Levels" id="Reason_Sim_replacement" class="form-control1">
+										<option>Sim Lost</option>
+										<option>Sim Damage</option>
+
+                                        </select>
+                                </div>
+                                    </div>
+                                
+                                
+                                
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Email Id</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="Email_Id" type="email" class="form-control1" id="Email_Id" placeholder="Enter Email Id">
+									</div>
+                                    </div>
+
+
+                                <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Level</label>
+									<div class="col-sm-8"><select disabled="" style="background-color:#E4E4E4;" name="Levels" id="level" class="form-control1">
+										<option>M-1</option>
+										<option>M-2</option>
+										<option>M-3</option>
+										<option>M-4</option>
+                                        <option>M-5</option>
+										<option>M-6</option>
+										<option>M-7</option>
+										<option>M-8</option>
+                                        <option>M-9</option>
+										<option>M-10</option>
+										<option>M-11</option>
+									</select></div>
+                                </div>
+
+                                
+                                      <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Scheme <font color="red"> *</font></label>
+									<div class="col-sm-8"> 
+                                        @Html.DropDownListFor(model => model.Plans_List_View, new SelectList(new Vodafone_Essar1.Controllers.EmployeeController().GetScheme(), "Plan", "Plan"), new { id = "Scheme", @class = "form-control1", disabled = "", style = "background-color:#E4E4E4;" })</div>
+                                    </div>
+
+                                
+                                
+                                    <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Month</label>
+									<div class="col-sm-4"><select disabled="" style="background-color:#E4E4E4;" name="Months" id="Months" class="form-control1">
+										<option>Jan</option>
+										<option>Feb</option>
+										<option>Mar</option>
+										<option>Apr</option>
+                                        <option>May</option>
+										<option>Jun</option>
+										<option>Jul</option>
+										<option>Aug</option>
+                                        <option>Sep</option>
+										<option>Oct</option>
+                                        <option>Nov</option>
+										<option>Dec</option>
+									</select></div>
+
+                                        <div class="col-sm-4"><select disabled="" style="background-color:#E4E4E4;" name="Year" id="Year" class="form-control1">
+										<option>2017</option>
+										<option>2018</option>
+										<option>2019</option>
+										<option>2020</option>
+                                        <option>2021</option>
+										<option>2022</option>
+										<option>2023</option>
+										<option>2024</option>
+                                        <option>2025</option>
+										<option>2026</option>
+                                        <option>2027</option>
+										<option>2028</option>
+									</select></div>
+								    </div>
+                                    
+                                
+								 <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Sub-Total</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="Sub_total" type="text" class="form-control1" id="Sub_Total" placeholder="">
+									</div>
+                                    </div>
+
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">GST</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="GST_18" type="text" class="form-control1" id="GST_18" placeholder="">
+									</div>
+                                    </div>
+								
+                                <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Limit</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="Limit" type="text" class="form-control1" id="Limit" placeholder="">
+									</div>
+                                    </div>
+
+                                 <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Total</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="Total" type="text" class="form-control1" id="Total" placeholder="" >
+									</div>
+                                    </div>
+
+                                 <div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Deduction</label>
+									<div class="col-sm-8">
+										<input disabled="" style="background-color:#E4E4E4;" name="Deduction" type="text" class="form-control1" id="Deduction" placeholder="">
+									</div>
+                                    </div>
+                                
+                                 <div class="col-sm-offset-2 col-sm-10">
+				                
+					                <input class="showHide btn btn-primary"  type="submit" value="Submit">
+					           
+					            </div>
+                            }
+			</div>
+                                 
+								
+							
+			    </div>
+			
+  </div>
+    </div>
+
+
+<script src="~/Scripts/Change_Request.js"></script>
+

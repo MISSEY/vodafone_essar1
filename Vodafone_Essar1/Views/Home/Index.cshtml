@@ -1,0 +1,81 @@
+﻿@model Vodafone_Essar1.Models.UserCredential 
+@{
+   Layout = null;
+   
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Vodafone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/Content/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="~/Content/css/style.css" rel='stylesheet' type='text/css' />
+<link href="~/Content/css/font-awesome.css" rel="stylesheet"> 
+<script src="~/Content/js/jquery.min.js"> </script>
+<script src="~/Content/js/bootstrap.min.js"> </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            
+            var msg = '@ViewBag.msg';
+            
+            if(msg!=''){
+                alert(msg);
+            }
+            
+            
+        });
+    </script>
+</head>
+<body style="background:url(VoiceDataService/Content/images/vodafone_wallpaer.jpg) no-repeat;height: 665px;background-position: center;background-size: cover;" >
+   
+	<div class="login">
+		<h1><a href="#">Voice Data Service </a></h1>
+		<div class="login-bottom">
+			<h2>Login</h2>
+			@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+             {
+             @Html.AntiForgeryToken()  
+             @Html.ValidationSummary(true)
+                
+			<div class="col-md-12">
+				<div class="login-mail">
+					@Html.TextBoxFor(a => a.UserName,"Username",new { placeholder="Username" })
+					<i class="fa fa-envelope"></i>
+				</div>
+				<div class="login-mail">
+					@Html.PasswordFor(a => a.password,new { placeholder="Password" })
+					<i class="fa fa-lock"></i>
+				</div>
+				   
+                <div class="col-md-12 login-do">
+				<label class="hvr-shutter-in-horizontal login-sub">
+					<input type="submit" value="login">
+					</label>
+
+			</div>
+			
+			</div>
+	
+			
+			<div class="clearfix"> </div>
+             }
+		</div>
+	</div>
+		<!---->
+<div class="copy-right">
+            <p> &copy; All Rights Reserved  </p>	    </div>  
+<!---->
+<!--scrolling js-->
+	<script src="~/Content/js/jquery.nicescroll.js"></script>
+	<script src="~/Content/js/scripts.js"></script>
+	<!--//scrolling js-->
+</body>
+</html>
+

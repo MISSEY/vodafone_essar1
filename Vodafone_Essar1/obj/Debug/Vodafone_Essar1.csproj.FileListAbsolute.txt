@@ -1,0 +1,317 @@
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.pdb
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Antlr3.Runtime.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.Infrastructure.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Optimization.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\WebGrease.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.pdb
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.pdb
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Antlr3.Runtime.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Optimization.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\WebGrease.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.Migrations.Initials.resources
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csproj.GenerateResource.Cache
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.dll
+C:\Users\smishra21\Documents\Visual Studio 2012\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.pdb
+D:\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+D:\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.Migrations.Initials.resources
+D:\Projects\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csproj.GenerateResource.Cache
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.Migrations.Initials.resources
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csproj.GenerateResource.Cache
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.pdb
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Antlr3.Runtime.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.Infrastructure.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Optimization.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebGrease.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.dll
+\\172.24.102.79\Orissa WebApps\Trainee\Trainee_2017\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.pdb
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.pdb
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Antlr3.Runtime.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.Infrastructure.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Optimization.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebGrease.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.Migrations.Initials.resources
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csproj.GenerateResource.Cache
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.dll
+E:\project\30-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.pdb
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.Migrations.Initials.resources
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csproj.GenerateResource.Cache
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.pdb
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Antlr3.Runtime.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.Infrastructure.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Optimization.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebGrease.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.dll
+E:\project\31-03-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.pdb
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Vodafone_Essar1.pdb
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Antlr3.Runtime.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.Infrastructure.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Optimization.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebGrease.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\EntityFramework.SqlServer.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Newtonsoft.Json.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Net.Http.Formatting.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Helpers.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Http.WebHost.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Mvc.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.Razor.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Deployment.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\System.Web.WebPages.Razor.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.Data.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\WebMatrix.WebData.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.AspNet.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.Core.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OAuth.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csprojResolveAssemblyReference.cache
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.Migrations.Initials.resources
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.csproj.GenerateResource.Cache
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.dll
+E:\project\9-04-2018\Vodafone_Essar1\Vodafone_Essar1\obj\Debug\Vodafone_Essar1.pdb

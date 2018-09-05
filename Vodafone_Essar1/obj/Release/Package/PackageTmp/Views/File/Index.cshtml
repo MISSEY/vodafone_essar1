@@ -1,0 +1,109 @@
+﻿ @using Vodafone_Essar1.ViewModels
+@model Excelsheet_List_viewmodel
+@{
+    ViewBag.Title = "Index";
+    string s = "";
+    string error = ViewBag.Error;
+    
+}
+<html>
+    <head>
+       <script type="text/javascript">
+           $(document).ready(function () {
+            var error1='@error';
+	        
+	        if(!error1==''){
+	            alert(error1);
+	        }
+
+	        $("#Template_download").on("click", (function () {
+	        
+	            $.ajax({
+	                url: '@Url.Action("Template_download", "File")',
+	                success: function (result) {
+	                    window.location = '@Url.Action("Template_download", "File")';
+	                }
+	            });
+	                
+	            
+	        }));
+	        if (document.getElementById("Sheet_name").value != "") {
+	            document.getElementById("Form_sheet").style.display = "block";
+	        }
+	        else {
+	            document.getElementById("Form_sheet").style.display = "none";
+	        }
+
+	        $("#bill_submit").on("click", (function () {
+
+	            var filepath = document.getElementById("inputfilebill").value;
+	            if (filepath == "") {
+	                alert("Please Choose Excel File To Upload");
+
+	            }
+	        }));
+
+	    });
+			
+
+		
+		</script>
+    </head>
+    <body>
+        <div style="height:400px;padding-top:50px;padding-left:150px">
+    <div>
+         <input class="showHide btn btn-primary" style="padding:0.5% 1.5% 0.5% 1.5%;" type="button"  value="Template Download" id="Template_download" />
+<form class="form-horizontal" method="Post"  action="@Url.Action("Index", "File")"  enctype="multipart/form-data">
+                    <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Browse </label>
+									<div class="col-sm-4">
+                     <input type="file"  class = "form-control1" name="file" id="inputfilebill" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+                    
+                                        </div>
+          
+                      <input class="showHide btn btn-primary"  type="submit"  value="Browse Sheets" id="bill_submit" style="padding:0.5% 1.5% 0.5% 1.5%;"/>
+                   
+                    </div>
+                       
+                </form>
+        </div>
+    <div>
+    <form class="form-horizontal" style="display:none" method="post"  action="@Url.Action("Index1", "File")" id="Form_sheet">
+    
+         <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Sheets </label>
+									<div class="col-sm-4">
+                                        @try{
+                                      <select class = "form-control1" name="Sheet_name" id="Sheet_name">
+                                          
+                                          @foreach (Excel_sheetcs item in Model.Excelsheetlist)
+                                         {
+                                            <option>@item.Name</option>
+                                         }
+                                        
+                                          
+                                      </select>
+                                           
+
+                                           <input type="text" hidden=""  name="fullpath" id="excelpath" @foreach (Excel_sheetcs item in Model.Excelsheetlist){
+                                                                                                                 s= @item.full_path;
+                                                                                                              } value="@s"/>
+                                          }
+                                          catch (Exception e)
+                                          {
+                                          }
+                                      
+                                </div>
+                  
+                                    </div>
+                
+                     <input class="showHide btn btn-primary"  style="padding:0.5% 1.5% 0.5% 1.5%;margin:10px" type="submit"  value="Upload Sheet" id="bill_submit1" /> 
+             
+     
+        </form>
+        </div>
+    </div>
+    </body>
+</html>
+	
+

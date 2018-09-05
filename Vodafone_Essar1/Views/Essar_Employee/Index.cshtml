@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script type="text/javascript">
+    function BindTable() {
+        $.ajax({
+
+            type: "POST",
+            dataType: "json",
+
+            url: "Essar_Employee/GetEmployee",
+            data: {
+                Mobile_no: document.getElementById('Mobile_no').value,
+            },
+
+            success: function (data1) {
+                Bind(data1);
+                document.getElementById("divLoading").style.display = "none";
+            }
+        });
+    }
+
+    function Bind(data1) {
+        $('#Employeetable').dataTable().fnDestroy();
+        var datatableVariable = $('#Employeetable').DataTable({
+            data: data1,
+
+            "sScrollX": true,
+            "sScrollY": 400,
+            "bScrollCollapse": true,
+            dom: 'Bfrtip',
+            buttons: [
+               'excel', 'print'
+            ],
+            columns: [
+
+                 { 'data': 'Year' },
+                 {
+                     'data': 'Months',
+                     render: function (data, type, row) {
+                         var m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                         return m[data];
+                     }
+                 },
+                
+                { 'data': 'Limit' },
+                { 'data': 'Sub_total' },
+                { 'data': 'GST_18' },
+                { 'data': 'Total' },
+                {'data': 'Deduction'}
+            ]
+        });
+    }
+
+    $(document).ready(function () {
+
+        $("#mobile_no_sumbit").click(function () {
+            document.getElementById("divLoading").style.display = "block";
+
+            BindTable();
+        });
+
+    });
+</script>
+<div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px;
+    top: 0px; width: 100%; height: 100%; background-color: #666666; z-index: 30001;
+    opacity: .8; filter: alpha(opacity=70);display:none" >
+    <p style="position: absolute; top: 30%; left: 45%; color: White;">
+        Loading, please wait...<img src="~/Content/images/ajax-loader.gif" />
+    </p>
+</div>
+<form class="form-horizontal" method="Post"  action="@Url.Action("GetEmployee", "Essar_Employee")"  enctype="multipart/form-data">
+                    <div class="form-group">
+									<label for="selector1" class="col-sm-2 control-label">Mobile Number </label>
+									<div class="col-sm-4">
+                     <input type="text"  class = "form-control1" name="Mobile_no" id="Mobile_no" placeholder="Enter Mobile Number"/>
+                    
+                                        </div>
+          
+                      <input class="showHide btn btn-primary"  type="button"  value="Find" id="mobile_no_sumbit"/>
+                   
+                    </div>
+                       
+   </form>
+
+
+ <div id="form1" runat="server">  
+      <div style="padding: 10px; border: 1px solid black; margin-top: 25px ;background-color:#fff" class="container-fluid">  
+           <table id="Employeetable" class="table table-responsive table-hover cell-border" width="100%">  
+                <thead>  
+
+                    <tr>
+                          
+                       
+                        <th>Year</th>  
+                        <th>Month</th>    
+                        <th>Limit</th> 
+                        <th>Sub Total</th> 
+                        <th>18% GST</th> 
+                        <th>Total</th>
+                        <th>Deduction</th>
+
+                    </tr>  
+                </thead>  
+               
+            </table> 
+              
+          </div>
+     </div>

@@ -1,0 +1,188 @@
+﻿@{
+    string Title = ViewBag.Title;
+}
+
+<script src="~/Content/js/moment.min.js"></script>
+<script src="~/Content/js/moment-with-locales.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/dataTables.buttons.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/buttons.flash.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/jszip.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/buttons.html5.min.js"></script>
+<script src="~/Content/DataTables/DataTables-1.10.16/js/buttons.print.min.js"></script>
+<script type="text/javascript">
+    function BindTable(Log_Lists) {
+        $.ajax({
+
+            type: "POST",
+            dataType: "json",
+
+            url: '@Url.Action("GetReports", "Reports")',
+            data: {
+                from: document.getElementById('from').value,
+                to: document.getElementById('to').value,
+                Type: Log_Lists
+            },
+
+            success: function (data1) {
+                Bind(data1);
+                document.getElementById("divLoading").style.display = "none";
+            }
+        });
+    }
+
+    function Bind(data1) {
+        debugger;
+        $('#Employeetable').dataTable().fnDestroy();
+        var datatableVariable = $('#Employeetable').DataTable({
+            data: data1,
+
+            "sScrollX": true,
+            "sScrollY": 400,
+            "bScrollCollapse": true,
+            dom: 'Bfrtip',
+            buttons: [
+               'excel', 'print'
+            ],
+            columns: [
+                {
+                    data: 'Date'
+                },
+
+                { 'data': 'Employees_Name' },
+                { 'data': 'SAP_ID' },
+                { 'data': 'Levels' },
+                { 'data': 'Mobile_no' },
+                {
+                    'data': 'Sim_no',
+                },
+                 { 'data': 'Department' },
+                { 'data': 'Reason' },
+
+            ]
+        });
+    }
+
+
+    $(document).ready(function () {
+
+        var Title = '@Title';
+        var Log_Lists = '';
+        var Month, sim_no;
+        document.getElementById('from').value = moment().format('YYYY/MM/DD');
+        document.getElementById('to').value = moment().format('YYYY/MM/DD');
+        document.getElementById("divLoading").style.display = "block";
+        if (Title == 'New Sim Activation Lists') {
+            Log_Lists = 'New_ACT';
+        }
+        else if (Title == 'Deactivation Lists') {
+            Log_Lists = 'DACT';
+        }
+        else if (Title == 'Sim Replacement Lists') {
+            Log_Lists = 'Sim_Replace';
+         }
+        else if (Title == 'Reactivation number Lists') {
+            Log_Lists = 'React';
+        }
+        else if (Title == 'Plan Change Lists') {
+            Log_Lists = 'Plan_Change';
+        }
+        else {
+        }
+        BindTable(Log_Lists);
+
+        var dateFormat = "yy/mm/dd",
+              from = $("#from")
+                .datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: "yy/mm/dd",
+                    numberOfMonths: 1
+                })
+                .on("change", function () {
+                    to.datepicker("option", "minDate", getDate(this));
+                }),
+              to = $("#to").datepicker({
+                  defaultDate: "+1w",
+                  changeMonth: true,
+                  dateFormat: "yy/mm/dd",
+                  changeYear: true,
+                  numberOfMonths: 1
+              })
+              .on("change", function () {
+                  from.datepicker("option", "maxDate", getDate(this));
+              });
+
+        function getDate(element) {
+            var date;
+            try {
+                date = $.datepicker.parseDate(dateFormat, element.value);
+            } catch (error) {
+                date = null;
+            }
+
+            return date;
+        }
+
+
+
+
+        $("#MonthYear").click(function () {
+            document.getElementById("divLoading").style.display = "block";
+            BindTable(Log_Lists);
+
+        });
+
+
+
+    });
+
+</script>
+<h3>@ViewBag.Title</h3>
+<div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px;
+    top: 0px; width: 100%; height: 100%; background-color: #666666; z-index: 30001;
+    opacity: .8; filter: alpha(opacity=70);display:block" >
+    <p style="position: absolute; top: 30%; left: 45%; color: White;">
+        Loading, please wait...<img src="~/Content/images/ajax-loader.gif" />
+    </p>
+</div>
+ <div id="form1" runat="server">  
+          
+        <div style="padding: 10px; border: 1px solid black; margin-top: 25px ;background-color:#fff" class="container-fluid">  
+           
+               <div>
+
+                   <form id="MonYear_submit" method="post" style="display:inline">
+
+                     <span style="padding-left:20%;" >
+                     <label class="showHide btn btn-primary" for="from" style="padding:0.5% 1.5%;">From</label>
+                     <input class="textarea1" type="text" id="from" name="from" placeholder="mm/dd/yyyy" >
+                     <label class="showHide btn btn-primary" for="to" style="padding:0.5% 1.5%;">to</label>
+                      <input class="textarea1" type="text" id="to" name="to" placeholder="mm/dd/yyyy">
+
+                 <input type="Button" class="showHide btn btn-primary" name="DateSubmit" id="MonthYear" value="Search" style="padding:0.5% 1.5% 0.5% 1.5%;">
+                         </span>
+                     </form> 
+                   </div>
+                
+          
+            <br />  
+            <table id="Employeetable" class="table table-responsive table-hover cell-border" width="100%">  
+                <thead>  
+
+                    <tr>
+                        <th>Date</th>
+                        <th>Employee Name</th>  
+                        <th>SAP ID</th>  
+                        <th>Levels</th>  
+                        <th>Mobile Number</th> 
+                        <th>Sim Number</th>  
+                        <th>Department</th>
+                        <th>Reason</th>
+                    </tr>  
+                </thead>  
+               
+            </table>  
+        </div>  
+    </div> 
+

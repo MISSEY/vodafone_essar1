@@ -1,0 +1,54 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <link href="~/Content/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    
+<!-- Custom Theme files -->
+<link href="~/Content/css/style.css" rel='stylesheet' type='text/css' />
+<link href="~/Content/css/font-awesome.css" rel="stylesheet">
+     <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-top" role="navigation">
+
+            
+           
+               <div class="navbar-header">
+               <h1> <a href="~/Employee"class="navbar-brand" >Voice Data Service </a>       </h1> 
+			  </div>
+            <div class="full-left">
+               
+                </div>
+            </nav>
+       <div class="content-main">
+ 
+  		
+		<!--content-->
+		
+		 @RenderBody()
+		
+		<!--//content-->
+           </div>
+
+	 
+		<!---->
+        </div>
+<div class="copy">
+            <p> &copy;  All Rights Reserved  </p>
+	    </div>
+		
+		<div class="clearfix"> </div>
+       
+     
+</body>
+    </html>

@@ -1,0 +1,285 @@
+﻿
+@{
+    ViewBag.Title = "Voice Data Service";
+     
+        string error_1 = ViewBag.Error_SimandMobile;
+      
+    
+
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    
+      
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/Content/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    
+<!-- Custom Theme files -->
+<link href="~/Content/css/style.css" rel='stylesheet' type='text/css' />
+<link href="~/Content/css/font-awesome.css" rel="stylesheet">
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>  
+    <!--<script src="~/Scripts/jquery-1.9.1.min.js"></script>-->
+<!-- Mainly scripts -->
+<script src="~/Content/js/jquery.metisMenu.js"></script>
+<script src="~/Content/js/jquery.slimscroll.min.js"></script>
+<!-- Custom and plugin javascript -->
+<link href="~/Content/css/custom.css" rel="stylesheet">
+<!--<script src="~/Content/js/custom.js"></script>-->
+<script src="~/Content/js/screenfull.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"> </script>
+    
+    <script src="~/Scripts/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!--<script src="~/Scripts/jquery-ui-1.10.4.min.js"></script>-->
+    <link href="~/Scripts/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+ <!--<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />-->
+
+    <link rel="stylesheet" type="text/css" href="~/Content/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="~/Content/DataTables/datatables.min.js"></script>
+  
+
+		<script type="text/javascript">
+		    $(function () {
+
+		        document.getElementById('upload_type').disabled = true;
+           var error_1 = '@error_1';
+
+		        if (!error_1 == '') {
+		            alert(error_1);
+		           
+                    @{
+		            ViewBag.Error_SimandMobile = null; }
+		        }
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+
+	
+			    $('.dropdown-submenu a.test').on("click", function (e) { 
+			    $(this).next('ul').toggle();
+			    e.stopPropagation();
+			    e.preventDefault();
+			   
+			});
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});
+			
+			$("#inputfile").click(function () {
+
+			    document.getElementById("button_choose").style.display = "block";
+
+			});
+
+			$("#Choose_file").on("click", "li", (function () {
+			    document.getElementById('upload_type').disabled = false;
+			    var i = $(this).index();			   
+			    document.getElementById("upload_type").value = i;
+
+			    })
+            );
+			$("#button_choose").on("click", (function () {
+			   
+			    var filepath = document.getElementById("inputfile").value;
+			   
+			    if (filepath == "") {
+			        alert("Please Choose Excel File To Upload");
+			    }
+
+			})
+            );
+
+			$("#Template_download_Sim").on("click", (function () {
+
+			    $.ajax({
+			        url: '@Url.Action("Template_download1", "File")',
+	                success: function (result) {
+	                    window.location = '@Url.Action("Template_download1", "File")';
+	                }
+	            });
+
+
+			}));
+		    $("#Template_download_Mob").on("click", (function () {
+
+		        $.ajax({
+		            url: '@Url.Action("Template_download2", "File")',
+			        success: function (result) {
+			            window.location = '@Url.Action("Template_download2", "File")';
+	                }
+			    });
+
+
+            }));
+
+	                
+
+		});
+		
+		   
+		 
+
+		
+		</script>
+    
+
+  <style>  
+    .showHide {  
+        cursor: pointer;  
+    }  
+    .dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+</style>  
+
+<!----->
+<!--skycons-icons-->
+<script src="~/Content/js/skycons.js"></script>
+<!--//skycons-icons-->
+</head>
+
+<body>
+    <div id="wrapper">
+
+<!----->
+        <nav class="navbar-default navbar-static-top" role="navigation">
+
+            
+           
+               <div class="navbar-header">
+               <h1> <a href="~/Employee"class="navbar-brand" >Voice Data Service </a> </h1> 
+			  </div>
+            <div class="full-left">
+        	 
+			
+             <ul class="nav navbar-nav">
+                 <li class="dropdown"> <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"> Masters </a>
+                     <ul class="dropdown-menu " role="menu">
+                        
+                        <li><a href="~/Essar_Users_Master">Users Master</a></li>
+		                <li><a href="~/Plans_Master">Plans Master</a></li>
+		                <li><a href="~/Safe_Custody_Master">Mobile No Master</a></li>
+                        <li><a href="~/Sim_Number_Master">Sim No Master</a></li>
+		                <li><a href="~/Billed_To_Master">Billed To Master</a></li>
+		            </ul>
+                 </li>
+
+                 <li class="dropdown"> <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"> Reports </a>
+                     <ul class="dropdown-menu " role="menu">
+                        
+                        <li><a href="~/Reports/New_Sim_Activation">New Sim Activation List</a></li>
+		                <li><a href="~/Reports/Deactivation">Deactivation List</a></li>
+		                <li><a href="~/Reports/Sim_Replacement">Sim Replacement List</a></li>
+                        <li><a href="~/Reports/Reactivation_numbers">Reactivation numbers</a></li>
+		                <li><a href="~/Reports/Plan_Change">Plan Change List</a></li>
+		            </ul>
+                 </li>
+
+                  <li class="dropdown"> <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"> Uploads </a>
+                     <ul id="Choose_file" class="dropdown-menu " role="menu">
+                       
+                         
+		                <li id="Bill" data-value="Bill"><a href="~/File">Bill</a></li>
+		                <li  id="Sim" data-value="Sim" class="dropdown-submenu"><a class="test"href="#">Sim Numbers</a>
+                            <ul class="dropdown-menu ">
+                                <li id="Template_download_Sim">
+                                      <a href="#">Template</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:document.getElementById('inputfile').click();">Sim Numbers</a>
+                                </li>
+                            </ul>
+		                </li>
+                       <li  id="Mobile" data-value="Mobile" class="dropdown-submenu"><a class="test"  href="#">Mobile Numbers</a>
+                            <ul class="dropdown-menu ">
+                                 <li id="Template_download_Mob">
+                                     <a href="#">Template</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:document.getElementById('inputfile').click();">Mobile Numbers</a>
+                                </li>
+                             </ul>	
+                            </li>	               
+		            </ul>
+                 </li>
+                 <li>
+                 <form method="post"  enctype="multipart/form-data">
+                   
+                     <input type="file" style="display:none;" name="file"id="inputfile" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+                     <input type="text" disabled="" hidden="" name="upload_type" id="upload_type"/>
+                       <input type="submit" class="showHide btn btn-primary" style="display:none;"  id="button_choose" />
+                </form>
+                    </li>
+             </ul>
+            
+           </div>
+		
+            <!-- Brand and toggle get grouped for better mobile display -->
+		 
+		   <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div style="padding-right:05%" class="drop-men" >
+		        <ul class=" nav_1">
+	    		
+					<li class="dropdown">
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">@Session["UserName"].ToString()<i class="caret"></i></span></a>
+		              <ul class="dropdown-menu" role="menu">
+		                <li><a href="~/Employee/logout"><i class="fa fa-user"></i>Sign-Out</a></li>
+		              </ul>
+		            </li>
+		           
+		        </ul>
+		     </div><!-- /.navbar-collapse -->
+			<div class="clearfix">
+       
+     </div>
+	  
+		    
+        </nav>
+       <div class="content-main">
+ 
+  		
+		<!--content-->
+		
+		 @RenderBody()
+		
+		<!--//content-->
+           </div>
+
+	 
+		<!---->
+        </div>
+<div class="copy">
+            <p style="margin-top: 50px"> &copy;  All Rights Reserved  </p>
+	    </div>
+		
+		<div class="clearfix"> </div>
+       
+     
+</body>
+
+
+<!--scrolling js-->
+	<script src="~/Content/js/jquery.nicescroll.js"></script>
+	<script src="~/Content/js/scripts.js"></script>
+	<!--//scrolling js-->
+	
+
+
+</html>
